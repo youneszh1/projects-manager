@@ -30,7 +30,7 @@ const Register = () => {
             {/* {console.log(formValues, connected)} */}
             <div className="row justify-content-center align-items-center">
                 <div className="col-md-8 ">
-                    <h3 className='text-center'>Register</h3>
+                    <h3 className='text-center my-4'>Register</h3>
                     <form onSubmit={handleSubmit}>
                         <div className="form-outline mb-2">
                             <label className="form-label" htmlFor="form2Example1">Email address or username</label>

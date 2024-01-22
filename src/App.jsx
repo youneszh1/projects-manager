@@ -4,8 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 // import './App.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
+
 import 'rsuite/dist/rsuite.min.css';
-import { Message } from 'rsuite';
 
 import Layout from './Components/Layout'
 import Home from './Components/Pages/Home.jsx';
@@ -18,13 +18,13 @@ import UserContext from './Components/Contexts/UserContext.js';
 
 
 function App() {
-  const [users, setUser] = useState({fullname: '', username: '', email: '', password: '', fonction: ''})
-  const [accounts, setAccounts] = useState([{username: 'youneszh1', email: 'youneszh1@gmail.com', password: '123'}])
-  const [connected, setConnected] = useState(undefined)
+  const [users, setUsers] = useState({id: 1 , fullname: '', username: '', email: '', password: '', type: '', photo: ''})
+  const [accounts, setAccounts] = useState([{id: 1, username: 'youneszh1', email: 'youneszh1@gmail.com', password: '123'}])
+  const [connected, setConnected] = useState()
 
   return (
     <>
-        <UserContext.Provider value={{accounts, connected, setConnected}}>
+        <UserContext.Provider value={{users, setUsers, accounts, connected, setConnected}}>
           <Layout/>
           <Routes>
             <Route index element={<Home/>} />
