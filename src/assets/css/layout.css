@@ -18,9 +18,15 @@
     color: #646cff;
 }
 
-.regBtn:hover{
+.regBtn{
     color: white;
     background-color: #646cff ;
+}
+.regBtn:hover{
+    color: #646cff;
+    background-color: transparent ;
+    border-color: #646cff;
+    
 }
 
 .nav-link:focus,
